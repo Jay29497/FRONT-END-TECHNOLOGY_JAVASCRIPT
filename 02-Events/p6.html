@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS-EVENT</title>
+    <style>
+      div {
+        background-color: teal;
+        color: #fff;
+        padding: 12px;
+        width: 50%;
+        height: 500px;
+        overflow: auto;
+      }
+      h4 {
+        padding: 10px;
+        background-color: crimson;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <center>
+      <h1>onmousewheel() and onscroll()</h1>
+    </center>
+
+    <h4 id="output"></h4>
+
+    <div id="txt" onmousewheel="wheelHandler()" onscroll="wheelHandler()">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis nulla
+        tempore nesciunt enim perferendis esse, amet laborum a? Molestias
+        voluptas rem pariatur cum quasi odit. Id incidunt quisquam repellendus
+        veritatis. Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+        Dolores minima iste id quia? Autem magnam incidunt, consequatur dolore
+        sequi fuga, minima doloremque dignissimos similique alias doloribus
+        nostrum error aspernatur dicta. Lorem ipsum dolor sit, amet consectetur
+        adipisicing elit. Odit, officiis quam placeat, earum aut amet saepe
+        recusandae ratione voluptate possimus quis iusto nesciunt, pariatur
+        mollitia quas corporis expedita beatae? Consequuntur? Lorem ipsum dolor
+        sit amet, consectetur adipisicing elit. Distinctio inventore sequi
+        quaerat dignissimos magni maiores in culpa, iure atque tempora deleniti
+        dolore a maxime quo illum nisi similique hic eius! Lorem ipsum, dolor
+        sit amet consectetur adipisicing elit. Rem neque, molestiae dignissimos
+        officiis, sit sequi hic blanditiis aspernatur magnam cupiditate quisquam
+        perferendis alias cum consequuntur fuga nesciunt iste debitis illum.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis nulla
+        tempore nesciunt enim perferendis esse, amet laborum a? Molestias
+        voluptas rem pariatur cum quasi odit. Id incidunt quisquam repellendus
+        veritatis. Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+        Dolores minima iste id quia? Autem magnam incidunt, consequatur dolore
+        sequi fuga, minima doloremque dignissimos similique alias doloribus
+        nostrum error aspernatur dicta. Lorem ipsum dolor sit, amet consectetur
+        adipisicing elit. Odit, officiis quam placeat, earum aut amet saepe
+        recusandae ratione voluptate possimus quis iusto nesciunt, pariatur
+        mollitia quas corporis expedita beatae? Consequuntur? Lorem ipsum dolor
+        sit amet, consectetur adipisicing elit. Distinctio inventore sequi
+        quaerat dignissimos magni maiores in culpa, iure atque tempora deleniti
+        dolore a maxime quo illum nisi similique hic eius! Lorem ipsum, dolor
+        sit amet consectetur adipisicing elit. Rem neque, molestiae dignissimos
+        officiis, sit sequi hic blanditiis aspernatur magnam cupiditate quisquam
+        perferendis alias cum consequuntur fuga nesciunt iste debitis illum.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis nulla
+        tempore nesciunt enim perferendis esse, amet laborum a? Molestias
+        voluptas rem pariatur cum quasi odit. Id incidunt quisquam repellendus
+        veritatis. Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+        Dolores minima iste id quia? Autem magnam incidunt, consequatur dolore
+        sequi fuga, minima doloremque dignissimos similique alias doloribus
+        nostrum error aspernatur dicta. Lorem ipsum dolor sit, amet consectetur
+        adipisicing elit. Odit, officiis quam placeat, earum aut amet saepe
+        recusandae ratione voluptate possimus quis iusto nesciunt, pariatur
+        mollitia quas corporis expedita beatae? Consequuntur? Lorem ipsum dolor
+        sit amet, consectetur adipisicing elit. Distinctio inventore sequi
+        quaerat dignissimos magni maiores in culpa, iure atque tempora deleniti
+        dolore a maxime quo illum nisi similique hic eius! Lorem ipsum, dolor
+        sit amet consectetur adipisicing elit. Rem neque, molestiae dignissimos
+        officiis, sit sequi hic blanditiis aspernatur magnam cupiditate quisquam
+        perferendis alias cum consequuntur fuga nesciunt iste debitis illum.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis nulla
+        tempore nesciunt enim perferendis esse, amet laborum a? Molestias
+        voluptas rem pariatur cum quasi odit. Id incidunt quisquam repellendus
+        veritatis. Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+        Dolores minima iste id quia? Autem magnam incidunt, consequatur dolore
+        sequi fuga, minima doloremque dignissimos similique alias doloribus
+        nostrum error aspernatur dicta. Lorem ipsum dolor sit, amet consectetur
+        adipisicing elit. Odit, officiis quam placeat, earum aut amet saepe
+        recusandae ratione voluptate possimus quis iusto nesciunt, pariatur
+        mollitia quas corporis expedita beatae? Consequuntur? Lorem ipsum dolor
+        sit amet, consectetur adipisicing elit. Distinctio inventore sequi
+        quaerat dignissimos magni maiores in culpa, iure atque tempora deleniti
+        dolore a maxime quo illum nisi similique hic eius! Lorem ipsum, dolor
+        sit amet consectetur adipisicing elit. Rem neque, molestiae dignissimos
+        officiis, sit sequi hic blanditiis aspernatur magnam cupiditate quisquam
+        perferendis alias cum consequuntur fuga nesciunt iste debitis illum.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis nulla
+        tempore nesciunt enim perferendis esse, amet laborum a? Molestias
+        voluptas rem pariatur cum quasi odit. Id incidunt quisquam repellendus
+        veritatis. Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+        Dolores minima iste id quia? Autem magnam incidunt, consequatur dolore
+        sequi fuga, minima doloremque dignissimos similique alias doloribus
+        nostrum error aspernatur dicta. Lorem ipsum dolor sit, amet consectetur
+        adipisicing elit. Odit, officiis quam placeat, earum aut amet saepe
+        recusandae ratione voluptate possimus quis iusto nesciunt, pariatur
+        mollitia quas corporis expedita beatae? Consequuntur? Lorem ipsum dolor
+        sit amet, consectetur adipisicing elit. Distinctio inventore sequi
+        quaerat dignissimos magni maiores in culpa, iure atque tempora deleniti
+        dolore a maxime quo illum nisi similique hic eius! Lorem ipsum, dolor
+        sit amet consectetur adipisicing elit. Rem neque, molestiae dignissimos
+        officiis, sit sequi hic blanditiis aspernatur magnam cupiditate quisquam
+        perferendis alias cum consequuntur fuga nesciunt iste debitis illum.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis nulla
+        tempore nesciunt enim perferendis esse, amet laborum a? Molestias
+        voluptas rem pariatur cum quasi odit. Id incidunt quisquam repellendus
+        veritatis. Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+        Dolores minima iste id quia? Autem magnam incidunt, consequatur dolore
+        sequi fuga, minima doloremque dignissimos similique alias doloribus
+        nostrum error aspernatur dicta. Lorem ipsum dolor sit, amet consectetur
+        adipisicing elit. Odit, officiis quam placeat, earum aut amet saepe
+        recusandae ratione voluptate possimus quis iusto nesciunt, pariatur
+        mollitia quas corporis expedita beatae? Consequuntur? Lorem ipsum dolor
+        sit amet, consectetur adipisicing elit. Distinctio inventore sequi
+        quaerat dignissimos magni maiores in culpa, iure atque tempora deleniti
+        dolore a maxime quo illum nisi similique hic eius! Lorem ipsum, dolor
+        sit amet consectetur adipisicing elit. Rem neque, molestiae dignissimos
+        officiis, sit sequi hic blanditiis aspernatur magnam cupiditate quisquam
+        perferendis alias cum consequuntur fuga nesciunt iste debitis illum.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis nulla
+        tempore nesciunt enim perferendis esse, amet laborum a? Molestias
+        voluptas rem pariatur cum quasi odit. Id incidunt quisquam repellendus
+        veritatis. Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+        Dolores minima iste id quia? Autem magnam incidunt, consequatur dolore
+        sequi fuga, minima doloremque dignissimos similique alias doloribus
+        nostrum error aspernatur dicta. Lorem ipsum dolor sit, amet consectetur
+        adipisicing elit. Odit, officiis quam placeat, earum aut amet saepe
+        recusandae ratione voluptate possimus quis iusto nesciunt, pariatur
+        mollitia quas corporis expedita beatae? Consequuntur? Lorem ipsum dolor
+        sit amet, consectetur adipisicing elit. Distinctio inventore sequi
+        quaerat dignissimos magni maiores in culpa, iure atque tempora deleniti
+        dolore a maxime quo illum nisi similique hic eius! Lorem ipsum, dolor
+        sit amet consectetur adipisicing elit. Rem neque, molestiae dignissimos
+        officiis, sit sequi hic blanditiis aspernatur magnam cupiditate quisquam
+        perferendis alias cum consequuntur fuga nesciunt iste debitis illum.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis nulla
+        tempore nesciunt enim perferendis esse, amet laborum a? Molestias
+        voluptas rem pariatur cum quasi odit. Id incidunt quisquam repellendus
+        veritatis. Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+        Dolores minima iste id quia? Autem magnam incidunt, consequatur dolore
+        sequi fuga, minima doloremque dignissimos similique alias doloribus
+        nostrum error aspernatur dicta. Lorem ipsum dolor sit, amet consectetur
+        adipisicing elit. Odit, officiis quam placeat, earum aut amet saepe
+        recusandae ratione voluptate possimus quis iusto nesciunt, pariatur
+        mollitia quas corporis expedita beatae? Consequuntur? Lorem ipsum dolor
+        sit amet, consectetur adipisicing elit. Distinctio inventore sequi
+        quaerat dignissimos magni maiores in culpa, iure atque tempora deleniti
+        dolore a maxime quo illum nisi similique hic eius! Lorem ipsum, dolor
+        sit amet consectetur adipisicing elit. Rem neque, molestiae dignissimos
+        officiis, sit sequi hic blanditiis aspernatur magnam cupiditate quisquam
+        perferendis alias cum consequuntur fuga nesciunt iste debitis illum.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis nulla
+        tempore nesciunt enim perferendis esse, amet laborum a? Molestias
+        voluptas rem pariatur cum quasi odit. Id incidunt quisquam repellendus
+        veritatis. Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+        Dolores minima iste id quia? Autem magnam incidunt, consequatur dolore
+        sequi fuga, minima doloremque dignissimos similique alias doloribus
+        nostrum error aspernatur dicta. Lorem ipsum dolor sit, amet consectetur
+        adipisicing elit. Odit, officiis quam placeat, earum aut amet saepe
+        recusandae ratione voluptate possimus quis iusto nesciunt, pariatur
+        mollitia quas corporis expedita beatae? Consequuntur? Lorem ipsum dolor
+        sit amet, consectetur adipisicing elit. Distinctio inventore sequi
+        quaerat dignissimos magni maiores in culpa, iure atque tempora deleniti
+        dolore a maxime quo illum nisi similique hic eius! Lorem ipsum, dolor
+        sit amet consectetur adipisicing elit. Rem neque, molestiae dignissimos
+        officiis, sit sequi hic blanditiis aspernatur magnam cupiditate quisquam
+        perferendis alias cum consequuntur fuga nesciunt iste debitis illum.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis nulla
+        tempore nesciunt enim perferendis esse, amet laborum a? Molestias
+        voluptas rem pariatur cum quasi odit. Id incidunt quisquam repellendus
+        veritatis. Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+        Dolores minima iste id quia? Autem magnam incidunt, consequatur dolore
+        sequi fuga, minima doloremque dignissimos similique alias doloribus
+        nostrum error aspernatur dicta. Lorem ipsum dolor sit, amet consectetur
+        adipisicing elit. Odit, officiis quam placeat, earum aut amet saepe
+        recusandae ratione voluptate possimus quis iusto nesciunt, pariatur
+        mollitia quas corporis expedita beatae? Consequuntur? Lorem ipsum dolor
+        sit amet, consectetur adipisicing elit. Distinctio inventore sequi
+        quaerat dignissimos magni maiores in culpa, iure atque tempora deleniti
+        dolore a maxime quo illum nisi similique hic eius! Lorem ipsum, dolor
+        sit amet consectetur adipisicing elit. Rem neque, molestiae dignissimos
+        officiis, sit sequi hic blanditiis aspernatur magnam cupiditate quisquam
+        perferendis alias cum consequuntur fuga nesciunt iste debitis illum.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis nulla
+        tempore nesciunt enim perferendis esse, amet laborum a? Molestias
+        voluptas rem pariatur cum quasi odit. Id incidunt quisquam repellendus
+        veritatis. Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+        Dolores minima iste id quia? Autem magnam incidunt, consequatur dolore
+        sequi fuga, minima doloremque dignissimos similique alias doloribus
+        nostrum error aspernatur dicta. Lorem ipsum dolor sit, amet consectetur
+        adipisicing elit. Odit, officiis quam placeat, earum aut amet saepe
+        recusandae ratione voluptate possimus quis iusto nesciunt, pariatur
+        mollitia quas corporis expedita beatae? Consequuntur? Lorem ipsum dolor
+        sit amet, consectetur adipisicing elit. Distinctio inventore sequi
+        quaerat dignissimos magni maiores in culpa, iure atque tempora deleniti
+        dolore a maxime quo illum nisi similique hic eius! Lorem ipsum, dolor
+        sit amet consectetur adipisicing elit. Rem neque, molestiae dignissimos
+        officiis, sit sequi hic blanditiis aspernatur magnam cupiditate quisquam
+        perferendis alias cum consequuntur fuga nesciunt iste debitis illum.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis nulla
+        tempore nesciunt enim perferendis esse, amet laborum a? Molestias
+        voluptas rem pariatur cum quasi odit. Id incidunt quisquam repellendus
+        veritatis. Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+        Dolores minima iste id quia? Autem magnam incidunt, consequatur dolore
+        sequi fuga, minima doloremque dignissimos similique alias doloribus
+        nostrum error aspernatur dicta. Lorem ipsum dolor sit, amet consectetur
+        adipisicing elit. Odit, officiis quam placeat, earum aut amet saepe
+        recusandae ratione voluptate possimus quis iusto nesciunt, pariatur
+        mollitia quas corporis expedita beatae? Consequuntur? Lorem ipsum dolor
+        sit amet, consectetur adipisicing elit. Distinctio inventore sequi
+        quaerat dignissimos magni maiores in culpa, iure atque tempora deleniti
+        dolore a maxime quo illum nisi similique hic eius! Lorem ipsum, dolor
+        sit amet consectetur adipisicing elit. Rem neque, molestiae dignissimos
+        officiis, sit sequi hic blanditiis aspernatur magnam cupiditate quisquam
+        perferendis alias cum consequuntur fuga nesciunt iste debitis illum.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis nulla
+        tempore nesciunt enim perferendis esse, amet laborum a? Molestias
+        voluptas rem pariatur cum quasi odit. Id incidunt quisquam repellendus
+        veritatis. Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+        Dolores minima iste id quia? Autem magnam incidunt, consequatur dolore
+        sequi fuga, minima doloremque dignissimos similique alias doloribus
+        nostrum error aspernatur dicta. Lorem ipsum dolor sit, amet consectetur
+        adipisicing elit. Odit, officiis quam placeat, earum aut amet saepe
+        recusandae ratione voluptate possimus quis iusto nesciunt, pariatur
+        mollitia quas corporis expedita beatae? Consequuntur? Lorem ipsum dolor
+        sit amet, consectetur adipisicing elit. Distinctio inventore sequi
+        quaerat dignissimos magni maiores in culpa, iure atque tempora deleniti
+        dolore a maxime quo illum nisi similique hic eius! Lorem ipsum, dolor
+        sit amet consectetur adipisicing elit. Rem neque, molestiae dignissimos
+        officiis, sit sequi hic blanditiis aspernatur magnam cupiditate quisquam
+        perferendis alias cum consequuntur fuga nesciunt iste debitis illum.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis nulla
+        tempore nesciunt enim perferendis esse, amet laborum a? Molestias
+        voluptas rem pariatur cum quasi odit. Id incidunt quisquam repellendus
+        veritatis. Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+        Dolores minima iste id quia? Autem magnam incidunt, consequatur dolore
+        sequi fuga, minima doloremque dignissimos similique alias doloribus
+        nostrum error aspernatur dicta. Lorem ipsum dolor sit, amet consectetur
+        adipisicing elit. Odit, officiis quam placeat, earum aut amet saepe
+        recusandae ratione voluptate possimus quis iusto nesciunt, pariatur
+        mollitia quas corporis expedita beatae? Consequuntur? Lorem ipsum dolor
+        sit amet, consectetur adipisicing elit. Distinctio inventore sequi
+        quaerat dignissimos magni maiores in culpa, iure atque tempora deleniti
+        dolore a maxime quo illum nisi similique hic eius! Lorem ipsum, dolor
+        sit amet consectetur adipisicing elit. Rem neque, molestiae dignissimos
+        officiis, sit sequi hic blanditiis aspernatur magnam cupiditate quisquam
+        perferendis alias cum consequuntur fuga nesciunt iste debitis illum.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis nulla
+        tempore nesciunt enim perferendis esse, amet laborum a? Molestias
+        voluptas rem pariatur cum quasi odit. Id incidunt quisquam repellendus
+        veritatis. Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+        Dolores minima iste id quia? Autem magnam incidunt, consequatur dolore
+        sequi fuga, minima doloremque dignissimos similique alias doloribus
+        nostrum error aspernatur dicta. Lorem ipsum dolor sit, amet consectetur
+        adipisicing elit. Odit, officiis quam placeat, earum aut amet saepe
+        recusandae ratione voluptate possimus quis iusto nesciunt, pariatur
+        mollitia quas corporis expedita beatae? Consequuntur? Lorem ipsum dolor
+        sit amet, consectetur adipisicing elit. Distinctio inventore sequi
+        quaerat dignissimos magni maiores in culpa, iure atque tempora deleniti
+        dolore a maxime quo illum nisi similique hic eius! Lorem ipsum, dolor
+        sit amet consectetur adipisicing elit. Rem neque, molestiae dignissimos
+        officiis, sit sequi hic blanditiis aspernatur magnam cupiditate quisquam
+        perferendis alias cum consequuntur fuga nesciunt iste debitis illum.
+      </p>
+    </div>
+
+    <script>
+      function wheelHandler() {
+        document.getElementById("output").innerText =
+          document.getElementById("txt").scrollTop + "px";
+      }
+    </script>
+  </body>
+</html>

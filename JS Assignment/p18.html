@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PRIME FACTORIAL OF NUMBERS</title>
+    <style>
+      .container {
+        background: linear-gradient(
+          65deg,
+          rgb(193, 92, 30) 0%,
+          rgb(116, 240, 118) 100%
+        );
+        width: 600px;
+        border: 3px solid black;
+        height: 400px;
+        margin: 135px;
+        padding: 30px;
+      }
+      div {
+        margin-bottom: 20px;
+        font-size: 25px;
+      }
+      input {
+        background-color: transparent;
+        height: 40px;
+        box-shadow: 0px 6px 8px lightgreen;
+        font-size: 25px;
+      }
+      button {
+        width: 200px;
+        height: 60px;
+        font-size: 20px;
+        border-radius: 20px;
+        margin: 20px;
+        background: linear-gradient(
+          65deg,
+          rgb(193, 92, 30) 0%,
+          rgb(116, 240, 118) 100%
+        );
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 25px;
+      }
+      /* hr {
+        border: 1px solid black;
+      } */
+      #result {
+        margin-bottom: 20px;
+        text-align: center;
+        font-size: 35px;
+      }
+    </style>
+  </head>
+  <body>
+    <center>
+      <div class="container">
+        <h2>Prime factorial of numbers</h2>
+        <hr />
+        <br />
+        <form onsubmit="condition(event)">
+          <div>
+            <label for="number">Enter a positive integer :</label>
+            <input type="number" name="number" id="number" required />
+          </div>
+          <button type="submit">SUBMIT</button>
+        </form>
+        <br />
+        <div id="result"></div>
+        <script>
+          function condition(event) {
+            event.preventDefault();
+
+            let a = document.getElementById("number").value;
+            let number = Number(a);
+
+            if (number < 0) {
+              document.getElementById("result").innerHTML = `
+                Error! Factorial for negative number does not exist`;
+            }
+
+            // if number is 0
+            else if (number === 0) {
+              document.getElementById(
+                "result"
+              ).innerHTML = `The factorial of ${number} is 1`;
+            }
+
+            // if number is positive
+            else {
+              let fact = 1;
+              for (i = 1; i <= number; i++) {
+                fact *= i;
+              }
+              document.getElementById(
+                "result"
+              ).innerHTML = `The factorial of ${number} is ${fact}.`;
+            }
+          }
+        </script>
+      </div>
+    </center>
+  </body>
+</html>

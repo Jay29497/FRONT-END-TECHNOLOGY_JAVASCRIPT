@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SIGN OF A GIVEN NUMBER</title>
+    <style>
+      .container {
+        background: linear-gradient(
+          65deg,
+          rgb(84, 131, 241) 0%,
+          rgb(225, 116, 240) 100%
+        );
+        width: 600px;
+        border: 3px solid black;
+        height: 400px;
+        margin: 130px;
+        padding: 30px;
+      }
+      div {
+        margin-bottom: 20px;
+        font-size: 25px;
+      }
+      input {
+        background-color: transparent;
+        height: 40px;
+        box-shadow: 0px 6px 8px purple;
+        font-size: 25px;
+      }
+      button {
+        width: 200px;
+        height: 60px;
+        font-size: 20px;
+        border-radius: 20px;
+        margin: 20px;
+        background: linear-gradient(
+          65deg,
+          rgb(84, 131, 241) 0%,
+          rgb(225, 116, 240) 100%
+        );
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 25px;
+      }
+      /* hr {
+        border: 1px solid black;
+      } */
+      #result {
+        margin-bottom: 20px;
+        text-align: center;
+        font-size: 35px;
+      }
+    </style>
+  </head>
+  <body>
+    <center>
+      <div class="container">
+        <h2>Sign of a given number</h2>
+        <hr />
+        <br />
+        <form onsubmit="codeHandler(event)">
+          <div>
+            <label for="inpA">Enter the number :</label>
+            <input type="number" name="inpA" id="inpA" required />
+          </div>
+          <button type="submit">RESULT</button>
+        </form>
+        <br />
+        <div id="result"></div>
+        <script>
+          function codeHandler(event) {
+            event.preventDefault();
+            let a = document.getElementById("inpA").value;
+
+            let number = Number(a);
+
+            if (number > 0) {
+              document.getElementById(
+                "result"
+              ).innerHTML = `The Number ${number} is positive`;
+            } else if (number == 0) {
+              document.getElementById(
+                "result"
+              ).innerHTML = `The number is zero`;
+            }
+            // if number is less than 0
+            else {
+              document.getElementById(
+                "result"
+              ).innerHTML = `The number ${number} is negative`;
+            }
+          }
+        </script>
+      </div>
+    </center>
+  </body>
+</html>

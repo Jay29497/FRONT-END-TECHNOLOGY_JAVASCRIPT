@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ADVANCED</title>
+  </head>
+  <body>
+    <center>
+      <h1>Hoisting</h1>
+      <p>
+        Hoisting is the default behaviour of moving all the declarations at the
+        top of the scope before code execution.
+      </p>
+    </center>
+    <hr />
+
+    <h2>Function Hoisting</h2>
+    <script>
+      // Calling function before declaration
+      sayHello(); // Hello, I'm hoisted!
+
+      function sayHello() {
+        document.write("<h1> Say Hello Function </h1>");
+      }
+    </script>
+
+    <h2>Variable Hoisting</h2>
+    <script>
+      str = "Hello World!";
+      alert(str); // Hello World! //
+      var str;
+
+      alert(str1); // undefined //
+      var str1;
+      str1 = "Hello World!";
+
+      var x = 5; // Declare and initialize x
+      var y; // Declare y
+      alert(x + "," + y); // undefined //
+      y = 10; // initialize y
+
+      var a = 3; // Declare and initialize a
+      b = 6; // initialize b
+      alert(a + "," + b); // 3, 6 //
+      var b; // Declare b
+    </script>
+  </body>
+</html>

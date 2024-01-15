@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FORM</title>
+    <link rel="stylesheet" href="assets/css/form.css" />
+  </head>
+  <body>
+    <form name="cForm" onsubmit="return validate(event)" method="post">
+      <h1><u>Contact Form</u></h1>
+      <div class="row">
+        <label for="name">FullName</label><br />
+        <input type="text" name="name" id="name" />
+        <strong id="status"></strong>
+      </div>
+      <div class="row">
+        <label for="email">Email id</label><br />
+        <input type="text" name="email" id="email" />
+        <strong id="status1"></strong>
+      </div>
+      <div class="row">
+        <label for="mobile">Mobile Number</label><br />
+        <input type="number" name="mobile" id="mobile" />
+        <strong id="status2"></strong>
+      </div>
+      <div class="row">
+        <label for="city">City</label><br />
+        <select type="text" name="text" id="city">
+          <option value="selected">Choose city name</option>
+          <option value="">Bangalore</option>
+          <option value="">Mysore</option>
+          <option value="">Raichur</option>
+          <option value="">Mandya</option>
+        </select>
+        <strong id="status3"></strong>
+      </div>
+      <div class="row">
+        <label for="gender">Gender</label><br />
+        <input type="radio" id="male" name="gender" value="Male" />
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="Female" />
+        <label for="female">Female</label><br />
+        <strong id="status4"></strong>
+      </div>
+      <div class="row">
+        <label for="lang">Language (optional)</label><br />
+        <input type="checkbox" value="kan" name="lang" id="lang" />
+        <label for="">Kannada</label>
+        <input type="checkbox" value="eng" name="lang" id="lang" />
+        <label for="">English</label>
+        <input type="checkbox" value="hin" name="lang" id="lang" />
+        <label for="">Hindi</label>
+        <input type="checkbox" value="tam" name="lang" id="lang" />
+        <label for="">Tamil</label>
+        <input type="checkbox" value="tel" name="lang" id="lang" />
+        <label for="">Telugu</label><br />
+        <strong id="status5"></strong>
+      </div>
+      <br />
+      <button type="submit">SUBMIT</button>
+      <button type="reset">RESET</button>
+    </form>
+    <script src="/assets/js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VOWEL OR CONSONANT</title>
+    <style>
+      .container {
+        background: linear-gradient(
+          65deg,
+          rgb(167, 75, 254) 0%,
+          rgb(241, 77, 189) 100%
+        );
+        width: 850px;
+        border: 3px solid black;
+        height: 400px;
+        margin: 110px;
+        padding: 30px;
+      }
+      div {
+        margin-bottom: 20px;
+        font-size: 25px;
+      }
+      input {
+        background-color: transparent;
+        height: 40px;
+        box-shadow: 0px 6px 8px rgb(204, 50, 153);
+        font-size: 25px;
+      }
+      button {
+        width: 200px;
+        height: 60px;
+        font-size: 20px;
+        border-radius: 20px;
+        margin: 20px;
+        background: linear-gradient(
+          65deg,
+          rgb(167, 75, 254) 0%,
+          rgb(241, 77, 189) 100%
+        );
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 25px;
+      }
+      /* hr {
+        border: 1px solid black;
+      } */
+      #result {
+        margin-bottom: 20px;
+        text-align: center;
+        font-size: 35px;
+      }
+    </style>
+  </head>
+  <body>
+    <center>
+      <div class="container">
+        <h2>VOWEL OR CONSONANT</h2>
+        <hr />
+        <br />
+        <form onsubmit="condition(event)">
+          <div>
+            <label for="alphabet">Enter a alphabet :</label>
+            <input type="text" name="alphabet" id="alphabet" required />
+          </div>
+          <button type="submit">CHECK</button>
+        </form>
+        <br />
+        <div id="result"></div>
+        <script>
+          function condition(event) {
+            event.preventDefault();
+
+            let x = document.getElementById("alphabet").value;
+
+            if (/[0-9]/.test(x)) {
+              document.getElementById(
+                "result"
+              ).innerHTML = `Enter a Alphabet, it is Number`;
+            } else if (/[a-zA-Z]/.test(x)) {
+              if (
+                x == "a" ||
+                x == "e" ||
+                x == "i" ||
+                x == "o" ||
+                x == "u" ||
+                x == "A" ||
+                x == "E" ||
+                x == "I" ||
+                x == "O" ||
+                x == "U"
+              ) {
+                document.getElementById("result").innerHTML = `${x} is a Vowel`;
+              } else {
+                document.getElementById(
+                  "result"
+                ).innerHTML = `${x} is a Consonant `;
+              }
+            } else {
+              document.getElementById(
+                "result"
+              ).innerHTML = `Enter a Alphabet, it is special character`;
+            }
+          }
+        </script>
+      </div>
+    </center>
+  </body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PYRAMID PATTERNS</title>
+    <style>
+      .container {
+        background: linear-gradient(
+          65deg,
+          rgb(65, 235, 221) 0%,
+          rgb(149, 72, 250) 100%
+        );
+        width: 650px;
+        border: 3px solid black;
+        height: 420px;
+        margin: 125px;
+        padding: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <center>
+      <div class="container">
+        <h1>
+          Patterns - Pyramids( Half, inverted half, hollow half, full, hollow
+          full, hollow inverted half )
+        </h1>
+        <script>
+          document.write(`<h2>1) FULL PYRAMID </h2>`);
+          for (let i = 1; i <= 5; i++) {
+            for (let k = 1; k <= 5 - i; k++) {
+              document.write(`&nbsp;`);
+            }
+            for (let j = 1; j <= i; j++) {
+              document.write(`* &nbsp;`);
+            }
+            document.write("<br/>");
+          }
+          document.write(`<h2>1) FULL PYRAMID </h2>`);
+          for (let i = 1; i <= 5; i++) {
+            for (let k = 1; k <= 5 - i; k++) {
+              document.write(`&nbsp;`);
+            }
+            for (let j = 1; j <= i; j++) {
+              document.write(`* &nbsp;`);
+            }
+            document.write("<br/>");
+          }
+        </script>
+      </div>
+    </center>
+  </body>
+</html>

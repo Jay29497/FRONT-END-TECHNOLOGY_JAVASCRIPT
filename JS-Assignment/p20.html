@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>REVERSE THE ARRAY</title>
+    <style>
+      .container {
+        background: linear-gradient(
+          65deg,
+          rgb(65, 235, 99) 0%,
+          rgb(83, 145, 251) 100%
+        );
+        width: 750px;
+        border: 3px solid black;
+        height: 420px;
+        margin: 120px;
+        padding: 30px;
+      }
+      div {
+        margin-bottom: 20px;
+        font-size: 25px;
+      }
+      input {
+        background-color: transparent;
+        height: 40px;
+        box-shadow: 0px 6px 8px rgb(68, 136, 254);
+        font-size: 25px;
+      }
+      button {
+        width: 300px;
+        height: 60px;
+        font-size: 20px;
+        border-radius: 20px;
+        margin: 20px;
+        background: linear-gradient(
+          65deg,
+          rgb(65, 235, 99) 0%,
+          rgb(83, 145, 251) 100%
+        );
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 25px;
+      }
+      /* hr {
+        border: 1px solid black;
+      } */
+      #result {
+        margin-bottom: 20px;
+        text-align: center;
+        font-size: 35px;
+      }
+    </style>
+  </head>
+  <body>
+    <center>
+      <div class="container">
+        <h2>Reverse the array</h2>
+        <hr />
+        <br />
+        <form onsubmit="reverseArray(event)">
+          <label for="arrayInput">Enter array elements (comma-separated):</label>
+          <input type="text" id="arrayInput" required>
+          <br><br>
+          <button onclick="reverseArray()">REVERSE ARRAY</button>
+          <div id="result"></div>
+      
+          <script>
+              function reverseArray(event) {
+              event.preventDefault(); 
+                  var inputArray = document.getElementById('arrayInput').value;
+                  var array = inputArray.split(','); // Split input into an array
+                  var reversedArray = array.reverse();
+                  document.getElementById(
+              "result"
+            ).innerHTML = `The original array is : [${inputArray}] <br> The reversed array is : [${reversedArray}]`;
+              }
+          </script>
+      
+      </div>
+    </center>
+  </body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>INTEGER NUMBER IN RANGE X AND Y</title>
+    <style>
+      .container {
+        background: linear-gradient(
+          65deg,
+          rgb(65, 235, 221) 0%,
+          rgb(149, 72, 250) 100%
+        );
+        width: 600px;
+        border: 3px solid black;
+        height: 500px;
+        margin: 80px;
+        padding: 30px;
+      }
+      div {
+        margin-bottom: 20px;
+        font-size: 25px;
+      }
+      input {
+        background-color: transparent;
+        height: 40px;
+        box-shadow: 0px 6px 8px blueviolet;
+        font-size: 25px;
+      }
+      button {
+        width: 200px;
+        height: 60px;
+        font-size: 20px;
+        border-radius: 20px;
+        margin: 20px;
+        background: linear-gradient(
+          65deg,
+          rgb(65, 235, 221) 0%,
+          rgb(149, 72, 250) 100%
+        );
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 25px;
+      }
+      /* hr {
+        border: 1px solid black;
+      } */
+      #result {
+        margin-bottom: 20px;
+        text-align: center;
+        font-size: 35px;
+      }
+    </style>
+  </head>
+  <body>
+    <center>
+      <div class="container">
+        <h2>Integer number in range x and y</h2>
+        <hr />
+        <br />
+        <form onsubmit="integerrange(event)">
+          <label for="min">Enter the x value</label>
+          <input type="number" name="x" id="x" required />
+          <br /><br />
+          <label for="max">Enter the y value</label>
+          <input type="number" name="y" id="y" required />
+          <br />
+          <br />
+          <button type="submit">Submit</button>
+        </form>
+        <br />
+        <div id="result"></div>
+        <script>
+          function integerrange(event) {
+            event.preventDefault();
+            let start = document.getElementById("x").value;
+            let end = document.getElementById("y").value;
+
+            let ans = [];
+            for (let i = start; i <= end; i++) {
+              ans.push(i);
+            }
+            document.getElementById(
+              "result"
+            ).innerHTML = `The integer number in range ${start} and ${end} is [${ans}]`;
+          }
+        </script>
+      </div>
+    </center>
+  </body>
+</html>

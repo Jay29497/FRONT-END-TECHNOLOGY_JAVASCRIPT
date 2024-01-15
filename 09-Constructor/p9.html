@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONST</title>
+</head>
+<body>
+    <center>
+        <h1>OBJECT</h1>
+    </center>
+    <hr>
+
+    <script>
+        function sample() {
+
+        } // function
+
+        let x = []; // Array
+        let y = {}; // Object
+    </script>
+
+    <script>
+        var user = {
+            //key:value, => property
+            name: "Raj",
+            email: "raj@gmail.com",
+            age: 33,
+            isView: true,
+            hobbies: ["Driving", "Riding"]
+        };
+
+        console.log('User =', user);
+
+        document.write(`<h3> Name = ${user} </h3>`); // can't destructure an object = [object Object]
+
+        document.write(`<h3> Name = ${user.name} </h3>`); // object key
+        document.write(`<h3> Name = ${user['email']} </h3>`); // object['key']
+
+        var colors = ["red","blue","green"];
+        document.write(`<h3> Colors = ${colors} </h3>`);
+        console.log('Colors =', colors);
+
+        document.write(`<h3> Hobbies = ${user.hobbies} </h3>`);
+        document.write(`<h3> Hobbies = ${user.hobbies[0]} </h3>`);
+
+        user.hobbies.forEach(function(x){
+            document.write(`<h1 style="color:red;"> Hobbies = ${x} </h1>`);
+        });
+    </script>
+</body>
+</html>

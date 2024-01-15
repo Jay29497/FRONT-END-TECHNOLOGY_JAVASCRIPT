@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ECMA</title>
+  </head>
+  <body>
+    <center>
+      <h1>Deleting Properties</h1>
+    </center>
+    <hr />
+
+    <script>
+      var x = new Object();
+
+      x.name = "Tata Nexon";
+      x.model = 2021;
+      x.color = "red";
+
+      console.log("Before delete x =", x);
+
+      // for(let ref in object)
+      for (let item in x) {
+        delete x[item];
+      }
+
+      console.log("After delete x =", x);
+    </script>
+  </body>
+</html>

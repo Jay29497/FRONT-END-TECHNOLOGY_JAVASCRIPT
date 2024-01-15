@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS-EVENT</title>
+  </head>
+  <body>
+    <center>
+      <h1>Media Eventa</h1>
+    </center>
+    <hr />
+
+    <h3 id="msg"></h3>
+
+    <video
+      src="assets/media/video.mp4"
+      height="200"
+      controls
+      onplay="playHan()"
+      onpause="pauseHan()"
+      onvolumechange="volHan()"
+      onseeking="seekHan()"
+    ></video>
+
+    <script>
+      var msg = document.getElementById("msg");
+
+      function playHan() {
+        msg.innerHTML = "Started playing video";
+        msg.style.color = "teal";
+      }
+
+      function pauseHan() {
+        msg.innerHTML = "video paused";
+        msg.style.color = "purple";
+      }
+
+      function volHan() {
+        msg.innerHTML = "changing volume";
+        msg.style.color = "blue";
+      }
+
+      function seekHan() {
+        msg.innerHTML = "video timing is changing";
+        msg.style.color = "red";
+      }
+    </script>
+  </body>
+</html>

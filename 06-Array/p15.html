@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ARRAY</title>
+  </head>
+  <body>
+    <center>
+      <h2>14) indexOf();</h2>
+      <p>
+        The indexOf() method returns the first index(position) of a specified
+        value, returns -1 if the value is not found and it searches from left to
+        right.
+      </p>
+      <p>
+        Negative start values counts from the last element (but still searches
+        from left to right)
+      </p>
+    </center>
+    <hr />
+
+    <p><b>SYNTAX:</b></p>
+    <pre>
+        1) array.indexOf();
+        2) array.indexOf(item, start);
+    </pre>
+    <hr />
+
+    <script>
+      let friuts = ["Apple", "Banana", "Mango", "Orange", "Papaya"];
+
+      document.write(`<p>FIRST RESULT</p>`);
+      document.write(`<p>Result One : ${friuts.indexOf("Apple")}</p>`); // prints: 0
+      document.write(`<p>Result Two : ${friuts.indexOf("Orange")}</p>`); // prints: 3
+      document.write(`<p>Result Three : ${friuts.indexOf("Pineapple")}</p>`); // prints: -1
+
+      document.write(`<p>SECOND RESULT</p>`);
+      document.write(`<p>Result One : ${friuts.indexOf("Mango", 0)}</p>`); // prints: 2
+      document.write(`<p>Result Two : ${friuts.indexOf("Mango", 3)}</p>`); // prints: -1
+    </script>
+  </body>
+</html>

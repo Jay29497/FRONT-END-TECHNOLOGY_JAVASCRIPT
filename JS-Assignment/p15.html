@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TRIANGLE IS VALID OR NOT</title>
+    <style>
+      table,
+      th,
+      td {
+        border-collapse: collapse;
+        padding: 10px;
+      }
+      .container {
+        background: linear-gradient(
+          65deg,
+          rgb(239, 92, 222) 0%,
+          rgb(253, 177, 45) 100%
+        );
+        width: 700px;
+        border: 3px solid black;
+        height: 500px;
+        margin: 85px;
+        padding: 30px;
+      }
+      tr > td {
+        font-size: 30px;
+      }
+      input {
+        background-color: transparent;
+        height: 40px;
+        box-shadow: 0px 6px 8px orange;
+        font-size: 25px;
+      }
+      button {
+        width: 200px;
+        height: 60px;
+        font-size: 20px;
+        border-radius: 20px;
+        margin: 20px;
+        background: linear-gradient(
+          65deg,
+          rgb(239, 92, 222) 0%,
+          rgb(253, 177, 45) 100%
+        );
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 25px;
+      }
+      /* hr {
+        border: 1px solid black;
+      } */
+      #result {
+        margin-bottom: 20px;
+        text-align: center;
+        font-size: 35px;
+      }
+    </style>
+  </head>
+  <body>
+    <center>
+      <div class="container">
+        <h1>Triangle is valid or not (sum of all angles = 180)</h1>
+        <hr />
+        <br />
+        <form onsubmit="valid(event)">
+          <table>
+            <tr>
+              <td>Enter value a :</td>
+              <td><input type="number" name="inpA" id="inpA" required /></td>
+            </tr>
+            <tr>
+              <td>Enter value b :</td>
+              <td><input type="number" name="inpB" id="inpB" required /></td>
+            </tr>
+            <tr>
+              <td>Enter value c :</td>
+              <td><input type="number" name="inpC" id="inpC" required /></td>
+            </tr>
+            <tr>
+              <td colspan="2" align="center">
+                <button type="submit">RESULT</button>
+              </td>
+            </tr>
+          </table>
+        </form>
+        <br />
+        <div id="result"></div>
+        <script>
+          function valid(event) {
+            event.preventDefault();
+
+            let a = document.getElementById("inpA").value;
+            let b = document.getElementById("inpB").value;
+            let c = document.getElementById("inpC").value;
+
+            let x = Number(a);
+            let y = Number(b);
+            let z = Number(c);
+            let res = 0;
+
+            if (x + y + z == 180 && x != 0 && y != 0 && z != 0) {
+              document.getElementById("result").innerHTML = `It is valid`;
+            } else {
+              document.getElementById("result").innerHTML = `It is invalid`;
+            }
+          }
+        </script>
+      </div>
+    </center>
+  </body>
+</html>

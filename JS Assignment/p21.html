@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>REVERSE THE NUMBERS</title>
+    <style>
+      .container {
+        background: linear-gradient(
+          65deg,
+          rgb(65, 235, 221) 0%,
+          rgb(149, 72, 250) 100%
+        );
+        width: 600px;
+        border: 3px solid black;
+        height: 430px;
+        margin: 120px;
+        padding: 30px;
+      }
+      div {
+        margin-bottom: 20px;
+        font-size: 25px;
+      }
+      input {
+        background-color: transparent;
+        height: 40px;
+        box-shadow: 0px 6px 8px blueviolet;
+        font-size: 25px;
+      }
+      button {
+        width: 200px;
+        height: 60px;
+        font-size: 20px;
+        border-radius: 20px;
+        margin: 20px;
+        background: linear-gradient(
+          65deg,
+          rgb(65, 235, 221) 0%,
+          rgb(149, 72, 250) 100%
+        );
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 25px;
+      }
+      /* hr {
+        border: 1px solid black;
+      } */
+      #result {
+        margin-bottom: 20px;
+        text-align: center;
+        font-size: 35px;
+      }
+    </style>
+  </head>
+  <body>
+    <center>
+      <div class="container">
+        <h2>Reverse the numbers</h2>
+        <hr />
+        <br />
+        <form onsubmit="revNum(event)">
+          <div>
+            <label for="number1">Enter numbers:</label>
+            <input type="number" name="number1" id="number1" required />
+          </div>
+          <button type="submit">REVERSE</button>
+        </form>
+        <br />
+        <div id="result"></div>
+        <script>
+          function revNum(event) {
+            event.preventDefault();
+
+            var number = document.getElementById("number1").value;
+            var n = Number(number);
+            var rev = 0,
+              remaining;
+
+            while (n > 0) {
+              remaining = n % 10;
+              rev = rev * 10 + remaining;
+              n = Math.floor(n / 10);
+            }
+            document.getElementById(
+              "result"
+            ).innerHTML = `The original number is : [${number}] <br> The reversed number is : [${rev}]`;
+          }
+        </script>
+      </div>
+    </center>
+  </body>
+</html>
